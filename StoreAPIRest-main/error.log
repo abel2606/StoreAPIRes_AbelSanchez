@@ -78,3 +78,15 @@
 {"level":"error","message":"No se ha podido acceder a /api/productos/filtro/h en el servidor"}
 {"level":"error","message":"No se ha podido acceder a /api/productos/filtro/g en el servidor"}
 {"level":"error","message":"No se ha podido acceder a /api/productos/filtro/ga en el servidor"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"No se ha podido acceder a /favicon.ico en el servidor"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el producto"}
+{"level":"error","message":"Error al eliminar el productoTypeError: ProductoDAO.eliminarProducto is not a function"}

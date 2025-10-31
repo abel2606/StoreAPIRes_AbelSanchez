@@ -1,3 +1,4 @@
+import ProductoService from  "../modulos/producto.service.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     const productList = document.getElementById('product-list');
@@ -10,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Alto de la pantalla" + window.screen.height + 'px');
 
     async function getProducts() {
-        let products = await fetch('http://127.0.0.1:3000/api/productos');
-        products = await products.json();
+        let products = await ProductoService.getProducts();
 
         products.forEach(product => {
             const productItem = document.createElement('li');
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const productId = e.target.getAttribute('data-id');
             if (confirm("¿Estas seguro de que deseas eliminar el producto?")) {
                 try {
-                    await fetch(`http://127.0.0.1:3000/api/productos/${productId}`, { method: "DELETE" });
-                    event.target.parentElement.remove();
+                    await ProductoService.deleteProduct(productId);
+                    e.target.parentElement.remove();
                     alert("Producto eliminado con éxito")
 
                 } catch (error) {
@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
             getProducts();
         }
         else {
-            let products = await fetch(`http://127.0.0.1:3000/api/productos/filtro/${filtro}`);
-            products = await products.json();
+            let products = await ProductoService.searchProducts(filtro);
+          
 
             products.forEach(product => {
                 const productItem = document.createElement('li');

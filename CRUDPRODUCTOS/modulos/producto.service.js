@@ -35,7 +35,7 @@ export default class ProductoService {
         }).then(response => response.json());
     }
 
-    static async searchProducts(fislter) {
+    static async searchProducts(filter) {
         return await fetch(`${API_URL}/filtro/${filter}`).then(response => response.json());
     }
 }

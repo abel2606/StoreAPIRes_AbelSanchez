@@ -99,7 +99,7 @@ class ProductoController {
                 next(new AppError('Producto no encontrado', 404))
             }
 
-            const producto = await ProductoDAO.eliminarProducto(id);
+            const producto = await ProductoDAO.eliminarProductoPorId(id);
 
             const msjReturn = { mensaje: 'Producto Eliminado Correctamente' };
 

@@ -16,6 +16,9 @@ class ProductoDAO {
         return await Producto.findById(id);
     }
 
+    async obtenerProductoPorNombre(filtro){
+        return await Producto.find({nombre:{$regex: filtro, $options: 'i'}});
+    }
     async obtenerProductos(limit = 10){
         return await Producto.find().limit(limit);
     }
